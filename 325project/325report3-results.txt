@@ -1,0 +1,18 @@
+
+Customer Name Dog Name Email                   Fees                             
+------------- -------- ----------------- ----------                             
+Dave Curry    Blue     bye@yahoo.com              5                             
+Jack Nicholso Louise   qwerty@yahoo.com          20                             
+Emil Doner    Jamie    holla@yahoo.com           22                             
+Paul Portnoy  James    byebye@yahoo.com          24                             
+Phil Heroe    Henry    1234@yahoo.com            25                             
+Brian Lockly  Nifa     hjasd@yahoo.com           99                             
+Bri Adams     Jack     hello@yahoo.com          100                             
+Sharon Sheryl Joe      lkj@yahoo.com            124                             
+
+
+
+        **********CUSTOMER BALANCE DUE WITH @YAHOO EMAILS**************
+
+8 rows selected.
+

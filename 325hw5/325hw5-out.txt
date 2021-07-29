@@ -1,0 +1,208 @@
+Homework 5 Problem 1
+Philip Toulinov
+
+relational selection
+
+CLIE CLIENT_LNAME    CLIENT_FNAME    CLIENT_P CLIENT_CREDIT_RTG CLI             
+---- --------------- --------------- -------- ----------------- ---             
+1111 Alpha           Ann             111-1111               4.9 100             
+3333 Carlos          Ann             333-3333               4.2 300             
+4444 Delta           David           222-2222               3.7 400             
+5555 Beta            Edie            555-5555                 5                 
+8888 Greta           Gail            888-8888               4.4 200             
+9999 Harpo           Harry           999-9999               3.6 100             
+
+6 rows selected.
+
+pure relational projection
+
+MOVIE MOVI                                                                      
+----- ----                                                                      
+PG-13 1989                                                                      
+G     1999                                                                      
+A     1969                                                                      
+G     1979                                                                      
+R     1975                                                                      
+R     1987                                                                      
+PG    1983                                                                      
+PG    1999                                                                      
+G     1940                                                                      
+PG    1977                                                                      
+PG    1980                                                                      
+
+MOVIE MOVI                                                                      
+----- ----                                                                      
+R     1980                                                                      
+G     1950                                                                      
+R     1999                                                                      
+G     1939                                                                      
+G     1947                                                                      
+G     1995                                                                      
+A     1971                                                                      
+PG    1984                                                                      
+
+19 rows selected.
+
+equi-join of client and movie_category
+
+CLIE CLIENT_LNAME    CLIENT_FNAME    CLIENT_P CLIENT_CREDIT_RTG CLI CAT         
+---- --------------- --------------- -------- ----------------- --- ---         
+CATEGORY_N                                                                      
+----------                                                                      
+9999 Harpo           Harry           999-9999               3.6 100 100         
+Comedy                                                                          
+                                                                                
+1111 Alpha           Ann             111-1111               4.9 100 100         
+Comedy                                                                          
+                                                                                
+8888 Greta           Gail            888-8888               4.4 200 200         
+Action                                                                          
+                                                                                
+
+CLIE CLIENT_LNAME    CLIENT_FNAME    CLIENT_P CLIENT_CREDIT_RTG CLI CAT         
+---- --------------- --------------- -------- ----------------- --- ---         
+CATEGORY_N                                                                      
+----------                                                                      
+2222 Beta            Bob             222-2222               1.2 200 200         
+Action                                                                          
+                                                                                
+3333 Carlos          Ann             333-3333               4.2 300 300         
+Drama                                                                           
+                                                                                
+6666 Epsilon         Emma            666-6666               2.1 400 400         
+Classic                                                                         
+                                                                                
+
+CLIE CLIENT_LNAME    CLIENT_FNAME    CLIENT_P CLIENT_CREDIT_RTG CLI CAT         
+---- --------------- --------------- -------- ----------------- --- ---         
+CATEGORY_N                                                                      
+----------                                                                      
+4444 Delta           David           222-2222               3.7 400 400         
+Classic                                                                         
+                                                                                
+7777 Feta            Frank           777-7777                 0 500 500         
+Family                                                                          
+                                                                                
+
+8 rows selected.
+
+Project just the rented video IDs, date out, and date due for rentals that have not yet been returned
+
+VID_ID DATE_OUT  DATE_DUE                                                       
+------ --------- ---------                                                      
+130031 19-SEP-19 22-SEP-19                                                      
+130012 21-SEP-19 22-SEP-19                                                      
+210011 08-AUG-19 11-AUG-19                                                      
+230012 05-SEP-19 10-SEP-19                                                      
+220013 22-SEP-19 25-SEP-19                                                      
+220062 21-SEP-19 26-SEP-19                                                      
+210011 15-SEP-19 17-SEP-19                                                      
+
+7 rows selected.
+
+Project just the video IDs, video formats, and rental prices for videos that do not have the format Blu-Ray
+
+VID_ID VID_FOR VID_RENTAL_PRICE                                                 
+------ ------- ----------------                                                 
+130012 DVD                 4.99                                                 
+130022 DVD                 5.99                                                 
+130031 DVD                 4.99                                                 
+210011 HD-DVD               .99                                                 
+230012 DVD                 3.99                                                 
+330023 DVD                 4.99                                                 
+210031 HD-DVD               .99                                                 
+230033 DVD                 3.99                                                 
+210041 HD-DVD              1.29                                                 
+
+9 rows selected.
+
+1-6
+
+CATEGORY_N CLIENT_LNAME    CLIENT_CREDIT_RTG                                    
+---------- --------------- -----------------                                    
+Comedy     Harpo                         3.6                                    
+Comedy     Alpha                         4.9                                    
+Action     Greta                         4.4                                    
+Action     Beta                          1.2                                    
+Drama      Carlos                        4.2                                    
+Classic    Epsilon                       2.1                                    
+Classic    Delta                         3.7                                    
+Family     Feta                            0                                    
+
+8 rows selected.
+
+1-7
+
+VID_ID VID_FOR VID_PURCH VID_RENTAL_PRICE MOVIE                                 
+------ ------- --------- ---------------- -----                                 
+120011 Blu-Ray 11-JAN-10             2.99 10001                                 
+130012 DVD     22-FEB-11             4.99 10001                                 
+130031 DVD     22-FEB-11             4.99 10003                                 
+210011 HD-DVD  05-MAY-09              .99 20001                                 
+230012 DVD     01-JAN-10             3.99 20001                                 
+330023 DVD     07-JUN-09             4.99 30002                                 
+320032 Blu-Ray 01-DEC-11             2.99 30003                                 
+230033 DVD     17-AUG-10             3.99 20003                                 
+220062 Blu-Ray 01-DEC-11             2.99 20006                                 
+420011 Blu-Ray 04-OCT-10             2.19 40001                                 
+
+10 rows selected.
+
+1-8
+
+VID_ID VID_FOR VID_PURCH VID_RENTAL_PRICE MOVIE                                 
+------ ------- --------- ---------------- -----                                 
+130012 DVD     22-FEB-11             4.99 10001                                 
+130022 DVD     04-MAR-12             5.99 10002                                 
+130031 DVD     22-FEB-11             4.99 10003                                 
+
+1-9
+
+MOVIE_TITLE                              MOVIE                                  
+---------------------------------------- -----                                  
+Gone with the Wind                       G                                      
+Indiana Jones and the Temple of Doom     PG                                     
+Indiana Jones and the Last Crusade       PG-13                                  
+Return of the Jedi                       PG                                     
+One Flew Over the Cuckoo's Nest          R                                      
+The Blues Brothers                       R                                      
+
+6 rows selected.
+
+1-10
+
+VID_ID VID_FOR VID_RENTAL_PRICE*.80                                             
+------ ------- --------------------                                             
+130012 DVD                    3.992                                             
+130022 DVD                    4.792                                             
+130031 DVD                    3.992                                             
+210011 HD-DVD                  .792                                             
+230012 DVD                    3.192                                             
+330023 DVD                    3.992                                             
+210031 HD-DVD                  .792                                             
+230033 DVD                    3.192                                             
+210041 HD-DVD                 1.032                                             
+
+9 rows selected.
+
+1-11
+
+MOVIE MOVIE_TITLE                                                               
+----- ----------------------------------------                                  
+PG-13 Indiana Jones and the Last Crusade                                        
+R     One Flew Over the Cuckoo's Nest                                           
+A     Midnight Cowboy                                                           
+A     Clockwork Orange                                                          
+R     Fatal Attraction                                                          
+R     The Matrix                                                                
+R     The Blues Brothers                                                        
+
+7 rows selected.
+
+1-12
+
+TOTALVIDEOS  AVGRENTAL                                                          
+----------- ----------                                                          
+ 20002.2857 3.25428571                                                          
+
+SQL> quit

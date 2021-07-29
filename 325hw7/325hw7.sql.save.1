@@ -1,0 +1,61 @@
+--Philip Toulinov
+--Cs 325-Homework7-Problem3
+--Last Moddified: 10/25/19
+
+spool 325hw7-out.txt
+prompt Homework 7 Problem 3
+prompt Philip Toulinov
+prompt 3-1
+
+select movie_title,movie_yr_released
+from movie
+where movie_director_lname = '&director';
+
+prompt 3-2
+
+select movie_title,movie_director_lname
+from movie
+where category_code in
+	            (select category_code
+		     from movie_category
+		     where category_name ='&name');
+
+
+prompt 3-3
+select count(*)as "# Videos"
+from movie,video,movie_category
+where movie.category_code = movie_category.category_code
+and video.movie_num =movie.movie_num
+and category_name = '&Videos';
+
+prompt 3-4
+
+select client_lname,client_fname
+from client
+where not exists(select 'a'
+		from rental
+		where client.client_num=rental.client_num
+		and (rental.date_returned > rental.date_due));  
+
+
+prompt 3-5
+
+select client_lname,category_name,client_credit_rtg
+from client,movie_category
+where client.client_fave_cat =movie_category.category_code
+and client_credit_rtg > (select avg(client.client_credit_rtg)
+			from client);
+
+
+prompt 3-6
+
+select vid_id,movie_title,vid_format
+from video,movie
+where movie.movie_num=video.movie_num
+and not exists (select 'a'
+                from rental
+		where rental.vid_id=video.vid_id
+		and date_out is not null);
+
+
+spool off;

@@ -1,0 +1,14 @@
+/*
+Philip Toulinov
+325 HW 3 -PROBLEM 2
+LAST MODIFIED: 17/ 9/ 19
+*/
+
+client (CLI_ID,cli_lname,cli_fname,cli_phone)
+
+video (VID_ID,vid_format,vid_purchase_date,vid_rental_price,
+vid_length)
+
+rental (CLI_ID,VID_ID)
+foreign key(vid_id) references video
+foreign key (cli_id) references client

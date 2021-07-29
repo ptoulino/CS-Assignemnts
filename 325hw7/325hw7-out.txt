@@ -1,0 +1,91 @@
+Homework 7 Problem 3
+Philip Toulinov
+3-1
+Enter value for director: Speilberg
+old   3: where movie_director_lname = '&director'
+new   3: where movie_director_lname = 'Speilberg'
+
+no rows selected
+
+3-2
+Enter value for name: Classic
+old   6: 		     where category_name ='&name')
+new   6: 		     where category_name ='Classic')
+
+MOVIE_TITLE                              MOVIE_DIRECTOR_LNAME                   
+---------------------------------------- ------------------------------         
+The Philadelphia Story                   Cukor                                  
+It's a Wonderful Life                    Capra                                  
+All About Eve                            Mankiewicz                             
+Gone with the Wind                       Fleming                                
+
+3-3
+Enter value for videos: Classic
+old   5: and category_name = '&Videos'
+new   5: and category_name = 'Classic'
+
+  # Videos                                                                      
+----------                                                                      
+         6                                                                      
+
+3-4
+
+CLIENT_LNAME    CLIENT_FNAME                                                    
+--------------- ---------------                                                 
+Beta            Bob                                                             
+Beta            Edie                                                            
+Epsilon         Emma                                                            
+Greta           Gail                                                            
+Harpo           Harry                                                           
+
+3-5
+
+CLIENT_LNAME    CATEGORY_N CLIENT_CREDIT_RTG                                    
+--------------- ---------- -----------------                                    
+Alpha           Comedy                   4.9                                    
+Harpo           Comedy                   3.3                                    
+Greta           Action                   4.4                                    
+Carlos          Drama                    3.8                                    
+Delta           Classic                  3.4                                    
+
+3-6
+
+VID_ID MOVIE_TITLE                              VID_FOR                         
+------ ---------------------------------------- -------                         
+120021 It's a Wonderful Life                    Blu-Ray                         
+220021 Indiana Jones and the Last Crusade       Blu-Ray                         
+330012 Babe                                     DVD                             
+320011 Babe                                     Blu-Ray                         
+320022 Toy Story                                Blu-Ray                         
+320021 Toy Story                                Blu-Ray                         
+330034 Toy Story 2                              DVD                             
+330033 Toy Story 2                              DVD                             
+320031 Toy Story 2                              Blu-Ray                         
+220032 Star Wars                                Blu-Ray                         
+230043 The Empire Strikes Back                  DVD                             
+
+VID_ID MOVIE_TITLE                              VID_FOR                         
+------ ---------------------------------------- -------                         
+220042 The Empire Strikes Back                  Blu-Ray                         
+230052 Return of the Jedi                       DVD                             
+220051 Return of the Jedi                       Blu-Ray                         
+230064 The Phantom Menace                       DVD                             
+220063 The Phantom Menace                       Blu-Ray                         
+220061 The Phantom Menace                       Blu-Ray                         
+420021 Midnight Cowboy                          Blu-Ray                         
+420031 Clockwork Orange                         Blu-Ray                         
+120041 All About Eve                            Blu-Ray                         
+120051 The Philadelphia Story                   Blu-Ray                         
+420042 Fatal Attraction                         Blu-Ray                         
+
+VID_ID MOVIE_TITLE                              VID_FOR                         
+------ ---------------------------------------- -------                         
+410041 Fatal Attraction                         HD-DVD                          
+230074 The Matrix                               DVD                             
+230073 The Matrix                               DVD                             
+220072 The Matrix                               Blu-Ray                         
+220071 The Matrix                               Blu-Ray                         
+130061 The Blues Brothers                       DVD                             
+
+28 rows selected.
+

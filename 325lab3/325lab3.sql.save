@@ -1,0 +1,4 @@
+start initial_parts.sql
+spool 325lab03
+prompt Philip  Melaniv
+         

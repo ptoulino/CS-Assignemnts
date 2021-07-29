@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!--
+    created by: Philip Toulinov and Brian Buchmiller
+    last modified: 2020-05-01
+-->
+<emails>
+    <to> Brian </to>
+    <from> Philip </from>
+    <heading> Message </heading>
+    <date> The date is <strong> Friday </strong> </date>
+    <deleted> </deleted>
+  
+    <mailinglist id= "newsletter"> </mailinglist>
+
+</emails>
+

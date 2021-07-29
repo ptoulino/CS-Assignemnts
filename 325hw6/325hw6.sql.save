@@ -1,0 +1,61 @@
+/*=====
+Philip Toulinov
+325-HOMEWORK 6-PROBLEM 2
+last modified: 18-OCT-2019
+=====*/
+spool 325hw6-out.txt
+prompt PHILIP TOULINOV
+prompt
+prompt 2-1
+prompt
+select avg(vid_rental_price)
+from video;
+prompt 2-2
+prompt
+select vid_id,vid_format
+from video
+where vid_rental_price <(select avg(vid_rental_price)
+			from video);
+prompt 2-3
+prompt
+select client_lname,client_fname
+from client
+where client;
+prompt 2-4
+prompt
+select movie_title || ': ' || movie_rating "Movie : Rating"
+from movie;
+prompt 2-5
+prompt
+
+select movie_title ||':('||movie_yr_released||')' "Movies: Year "
+from movie;
+
+prompt 2-6
+prompt
+
+select movie_title
+from movie
+where movie_title = (select min(vid_purchase_date)
+		   from video);
+
+prompt 2-7
+prompt
+
+select client_lname,client_fname,client_phone
+from client
+where exists
+	( select 'a'
+	  from rental
+-- use corelation  where date_returned is null); 
+prompt 2-8
+prompt
+select *
+from video
+where vid_format !='Blu-Ray'
+		and not exists
+		( select 'a'
+	  	from movie
+	  	where movie.movie_title=video.vid_format);
+
+spool off;

@@ -1,0 +1,35 @@
+Philip Toulinov
+Cs 325-Fall 2019
+Last modified: 12/12/19
+
+
+
+Now fully implemented our database offers features to grooming services across
+the greater Arcata area.
+Within this database one will be allowed access to store employee id numbers, 
+salary information and other critical information to run a successful business
+and keep track of what personal should be doing. The customer will be allowed 
+to choose whether or not they have any special requests for the groomer such as
+washing/grooming. Our database allows storage of information that is critical to
+run a business such as customer information and whether or not they have an 
+optional tab open and have payments due. Each customer has an identification 
+number as well as there dog for easy knowledge of what each dog's schedule is 
+for the day including their appointment times, identification numbers, and their 
+drop-off and pick-up location!
+
+We encourage our customers to take advantage of these features and set your 
+drop off location in whatever part of the city is most convenient for you! 
+Within our database we offer to keep track of your employee's salary, rates
+all thanks to a special employee identification number they have that will
+make it easy to keep track of which employee is on walking or washing 
+which dog. More applications within the database are completely possible,
+such as adding more customer identification numbers and employee 
+identification numbers and linking these within a different
+application such as a mobile application. Our database management 
+system serves as an efficient handler to balance the different 
+needs of diverse applications that are using the same data.
+
+Hopefully all these features will help a small business grow and expand 
+and additionally allow all the employees to be accountable for each dog
+they handle as each customer can have the ability to know what route 
+they are taking and hopefully in the long run becoming the best walking service in Arcata! 

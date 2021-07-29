@@ -1,0 +1,33 @@
+Philip Toulinov
+CS 325 -Fall 2019
+LAST MODIFIED: 11/17/19
+
+
+Customer(CUST_NUM,cust_fname,cust_lname,cust_payment)
+
+
+Customer_email(CUST_NUM,CUST_EMAIL)
+foreign key(cust_num)references customer
+
+
+
+Dog(DOG_ID,cust_num,cust_dog_name,dog_fav_food)
+foreign key (cust_num) references customer
+
+
+Grooming_appointment(APPOINTMENT_ID,appointment_time,drop_off_loc,pick_up_loc,walking_loc,cust_num)
+foreign key (dog_id) references dog,
+foreign key (groomer_id) references groomer
+
+
+Groomer(GROOMER_ID,groomer_fname,groomer_price,groomer_available,cust_num)
+foreign key(appointment_id) references grooming_appointment
+
+
+Service(SERV_ID,serv_type,serv_change,serv_charge,cust_num)
+foreign key (appointment_id) references grooming_appointment
+
+
+Grooming_service(APPOINTMENT_ID,SERV_TYPE,cust_num)
+foreign key(appointment_id) references grooming_appointment(appointment_id),
+foreign key(serv_id) references service (serv_id)

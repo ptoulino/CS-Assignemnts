@@ -1,0 +1,59 @@
+<?php
+
+function our_dropdown()
+
+{
+
+	$conn = hsu_conn_sess($_SESSION["username"],$_SESSION["password"]);
+?>
+
+   <form method="post" action="<?= htmlentities($_SERVER['PHP_SELF'],ENT_QUOTES)?>">
+
+
+<?php
+
+	$new_query ='select EMPLOYEE_ID, date_hired, position_field
+		 from employee
+		 order by EMPLOYEE_ID';
+
+	$stmt= oci_parse($conn, $new_query);
+	oci_execute($stmt,OCI_DEFAULT);
+?>
+	<h3 id="h3"> ⬇⬇⬇Please select to view ID #⬇⬇⬇ </h3>
+	<select name="empl">
+	<?php
+		while(oci_fetch($stmt))
+		{
+			$current_employee_id =oci_result($stmt,"EMPLOYEE_ID");
+		        $current_date_hired =oci_result($stmt, "DATE_HIRED");
+                        $current_position_field =oci_result($stmt,"POSITION_FIELD");
+
+        ?>
+		<option value ="<?=$current_employee_id?>">
+
+		<?= $current_date_hired ?> 
+		<?= $current_position_field ?>  
+		
+		</option>
+
+
+	<?php
+		}
+
+oci_free_statement($stmt);
+oci_close($conn);
+
+?>
+
+</select>
+
+</label>
+
+<div id="submit">
+<input type ="submit" value="submit" />
+</div>
+</fieldset>
+</form>
+<?php
+}
+?>

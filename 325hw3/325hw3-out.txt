@@ -1,0 +1,75 @@
+PHILIP TOULINOV
+THIS SHOULD SUCCEED!FIRST NAME NOT REQUIRED**
+
+1 row created.
+
+THIS SHOULD FAIL!CLIENT NEEDS PHONE**
+insert into client(cli_id,cli_lname)
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("PNT40"."CLIENT"."CLI_PHONE") 
+
+
+THIS SHOULD FAIL!VIDEO NEEDS LEGAL FORMAT**
+UPDATE video
+*
+ERROR at line 1:
+ORA-02290: check constraint (PNT40.SYS_C001328252) violated 
+
+
+THIS SHOULD SUCCEED! DEMO OF DEFAULT AND MORE**
+
+1 row created.
+
+THIS SHOULD FAIL! NO LEG LENGTH**
+insert into video(vid_length)
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("PNT40"."VIDEO"."VID_ID") 
+
+
+
+1 row deleted.
+
+
+1 row updated.
+
+
+CLI_ CLI_LNAME       CLI_FNAME       CLI_PHONE                                  
+---- --------------- --------------- ------------                               
+000A Alpha           Ann             000-0001                                   
+111B Beta            Bob             111-1112                                   
+222B Beta            Ann             222-2223                                   
+333C Carlos          David           333-3334                                   
+444D Delta           Edie            111-1112                                   
+555B Brown           Charlie         555-5555                                   
+66E  TOULINOV                        823-7537                                   
+
+7 rows selected.
+
+
+VID_ID VID_FO VID_PURCH VID_RENTAL_PRICE VID_LENGTH                             
+------ ------ --------- ---------------- ----------                             
+00000D DVD    10-JAN-18             1.99         73                             
+11111H HD-DVD 20-FEB-19             4.99         91                             
+22222B BluRay 30-MAR-17             1.99        105                             
+33333H HD-DVD 20-FEB-19             3.99         69                             
+44444B BluRay 04-APR-15              .99         91                             
+55555D HD-DVD 20-SEP-19             2.99          1                             
+54321A DVD    20-SEP-19             2.78                                        
+
+7 rows selected.
+
+
+CLI_ VID_ID                                                                     
+---- ------                                                                     
+000A 44444B                                                                     
+111B 11111H                                                                     
+222B 00000D                                                                     
+222B 22222B                                                                     
+333C 00000D                                                                     
+333C 11111H                                                                     
+333C 22222B                                                                     
+
+7 rows selected.
+

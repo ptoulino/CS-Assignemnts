@@ -1,0 +1,31 @@
+Philip Toulinov
+Last Modified:20-SEP-20
+NAME OF SCENARIO: LOVING CARE PET BOARDING (NO MODIFICATION)
+
+PRE-WRITTEN VARIATION:"can definitely improve on the name; can focus on just dogs or
+just cats or just [your choice of animal]; can expand to other types of pets; can add services, such as
+employees who take care of pets in the owners' homes."
+
+
+RE-WRITTEN VARIATION:
+Customer can request dog or cat to be groomed by professional
+groomer; can request a drop-off at a specific location at an expense; can
+request pick up at different location at an expense;ameliorate company name
+;customer can request one of three  specific route  
+ 
+
+QUESTIONS:
+1)Does the customer have any special request for the groomer?
+2)What is the specific groomers schedule for the week?
+3)What is the price for a big dog vs small dog to get groomed?
+4)What is the price to feed the dog per owner request everyday?
+5)What route/park the dog walker can take my dog?
+
+3 INITIAL BUSINESS RULES:
+1)Customer may identify favorite dog walker/groomer,
+ but they may only indicate one favorite for both
+2)Customer that does not pick up dog at correct given time
+ gets a late pickup penalty
+3)Customer may change grooming/ walking schedule according
+ to their needs with 48 hr notice
+

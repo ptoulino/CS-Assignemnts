@@ -1,0 +1,16 @@
+Philip Toulinov
+Cs 325-Fall 2019
+Last modified: 12/12/19
+
+I have included a pdf of the dog-walking map named project_map.pdf that shows 
+the different drop-off and pic-up locations available!
+Hopefully you enjoy my project and see that everything is up to par! Thanks for the great semester
+and all your help outside of class, I really appreciate it and think I learned a lot
+in this class!
+
+P.S. I edited my project model with you and noticed a mistake and just want to remind you that I meant a I to Many relationship in between customer and dog. I mistakenly put a Many to Many relationship in this model as we discussed during your office hours.
+Also sent you an email about this titled CS 325 Project(Design note).
+
+Thanks again!
+Philip
+

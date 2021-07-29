@@ -1,0 +1,3 @@
+prompt NAMES:PHILIP TOULINOV andMELANIE STEVENSOp
+
+ insert into part_orders(order_num,cust_num,part_num,order_date,quantity,order_code,delivery_code)
